@@ -22,7 +22,7 @@ namespace :db do
 
   desc "Drop the database"
   task :drop do
-    rm db_config['database']
+    rm db_config['database'] if File.file? db_config['database']
     puts "Database Dropped"
   end
 
@@ -60,6 +60,7 @@ namespace :maze do
       box.bottom_adjacent_box = Box.where(id: current + width).first
       box.save
     end
+    puts "Loaded Maze"
   end
 
   desc "Solve the puzzle"

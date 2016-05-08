@@ -86,14 +86,14 @@ bundle exec rake db:migrate
 ### Load a maze
 
 ```
-b exec rake "maze:load[6, 5, maze]"
+bundle exec rake "maze:load[6, 5, maze]"
 ```
 Loads a file called maze.csv located in `db/data/` folder into the database. (6 & 5 Represent the width & height of the mze)
 
 ### Solve a maze
 
 ```
-b exec rake maze:solve
+bundle exec rake maze:solve
 ```
 
 Solves the currently loaded maze.
@@ -106,23 +106,23 @@ All the examples mentioned below are part of the repository. You can add additio
 ### Load & Solve a Solvable Maze
 
 ```
-b exec rake "maze:load[6, 5, maze]"
-b exec rake maze:solve
+bundle exec rake "maze:load[6, 5, maze]"
+bundle exec rake maze:solve
 
 ```
 
 ### Load & Solve a Maze with Multiple Dead Ends
 
 ```
-b exec rake "maze:load[6, 5, solvable_with_2_deadends]"
-b exec rake maze:solve
+bundle exec rake "maze:load[6, 5, solvable_with_2_deadends]"
+bundle exec rake maze:solve
 ```
 
 ### Load & Try to Solve an Unsolvable Maze
 
 ```
-b exec rake "maze:load[6, 5, unsolvable]"
-b exec rake maze:solve
+bundle exec rake "maze:load[6, 5, unsolvable]"
+bundle exec rake maze:solve
 ```
 
 ### Solvable Maze with 2 Dead Ends
@@ -142,6 +142,7 @@ b exec rake maze:solve
        OUT
 
 **TP** - Turning Point
+
 **DE** - Dead End
 
 ### Unsolvable Maze
@@ -161,4 +162,5 @@ b exec rake maze:solve
        OUT
 
 **TP** - Turning Point
+
 **DE** - Dead End
